@@ -5,15 +5,16 @@ import BASE_URL from "./env";
 const App = () => {
   const [data, setData] = useState([]);
 
-  const getData = async () => {
-    try {
-      const res = await axios.get(`${BASE_URL}/products/product`);
-      console.log(res.data);
-      setData(res.data);
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
+const getData = async () => {
+  try {
+    const res = await axios.get(`${BASE_URL}/products/product`);
+    console.log(res.data);
+    setData(res.data.products || []);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
+};
+
 
   useEffect(() => {
     getData();
