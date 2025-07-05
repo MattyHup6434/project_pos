@@ -1,0 +1,20 @@
+{
+  "name": "project_pos",
+  "version": "1.0.0",
+  "description": "## สิ่งที่เราจะทำ - ใช้ ExpressJS + NodeJS สร้าง API - ใช้ Prisma จัดการฐานข้อมูล MySQL - ทำ CRUD (Create, Read, Update, Delete) - ทดสอบ API ด้วย Postman",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "dev": "electron .",
+    "start-dev": "set NODE_ENV=development && electron .",
+    "build-react": "cd client && npm install && npm run build",
+     "start-prod": "set NODE_ENV=production && electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^37.2.0"
+  }
+}
