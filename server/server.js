@@ -18,6 +18,11 @@ app.use(cors());      // CORS middleware to allow cross-origin requests
 app.use('/products', productRoutes); // Product routes for handling product-related requests
 app.use('/auth', authRoutes); // Authentication routes for handling user authentication
 
+// ✅ Health check route
+app.get('/', (req, res) => {
+  res.send('🎉 Backend POS is alive!');
+});
+
 // ✅ Server start
 app.listen(port, () => {
   console.log(`🚀 Server is running on port ${port}`);
